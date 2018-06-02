@@ -6,8 +6,8 @@ const app = http.createServer((req, res) => {
   res.end();
 });
 
-app.listen(80, () => {
-  console.log('server listening on port 80');
+app.listen(process.env.PORT, () => {
+  console.log('server listening');
 });
 
 const io = socketIO(app);
